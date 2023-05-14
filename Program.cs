@@ -64,7 +64,6 @@ class Program
                 await Task.Run(() => FloodSpam(webhookUrl, cancellationTokenSource.Token));
             }
         },
-        // Ajouter des commandes supplémentaires ici
     };
 
 
@@ -88,7 +87,6 @@ class Program
                     Console.Clear();
                     Console.WriteLine(Ascii);
                     helps();
-                    //Console.WriteLine($"Command '{command}' not recognized.");
                 }
             }
             catch (Exception ex)
@@ -109,11 +107,9 @@ class Program
 
         if (!response.IsSuccessStatusCode)
         {
-           // Console.WriteLine($"Failed to send message to webhook. Response status code: {response.StatusCode}");
         }
         else
         {
-            // Console.WriteLine($"Message sent successfully to webhook at {webhookUrl}");
         }
     }
 
@@ -409,5 +405,4 @@ class Program
 
     }
 
-    // Ajouter des méthodes pour d'autres commandes ici
 }
